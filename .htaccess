@@ -1,2 +1,5 @@
 RewriteEngine On
-RewriteRule ^([^/]*)x([^/]*)/([^/]*)/([^/]*)$ /?width=$1&height=$2&text=$3&color=$4 [L]
+RewriteBase /
+RewriteRule ^([0-9]+)x([0-9]+)$ /?width=$1&height=$2 [L]
+RewriteRule ^([0-9]+)x([0-9]+)/([^/]*)$ /?width=$1&height=$2&text=$3 [L]
+RewriteRule ^([0-9]+)x([0-9]+)/([^/]*)/([^/]*)$ /?width=$1&height=$2&text=$3&color=$4 [L]
